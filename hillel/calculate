@@ -11,3 +11,5 @@ elif s == "*":
     print(a * b)
 elif s == "/":
     print(a / b)
+else:
+        print("Помилка: ділення на нуль!")
