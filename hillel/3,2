@@ -1,0 +1,21 @@
+def move_last_to_first(input_list):
+    # Перевірка, чи список порожній або має лише один елемент
+    if len(input_list) <= 1:
+        return input_list
+
+    # Переміщення останнього елемента на початок списку
+    return [input_list[-1]] + input_list[:-1]
+
+
+# Приклади для перевірки
+examples = [
+    [12, 3, 4, 10],
+    [1],
+    [],
+    [12, 3, 4, 10, 8]
+]
+
+# Тестування прикладів
+for example in examples:
+    result = move_last_to_first(example)
+    print(f"{example} => {result}")
