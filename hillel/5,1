@@ -1,0 +1,11 @@
+import string
+
+
+def get_characters_between(letters_range):
+    start_letter, end_letter = letters_range.split('-')
+
+   all_letters = string.ascii_letters
+
+    start_index = all_letters.index(start_letter)
+    end_index = all_letters.index(end_letter)
+    return all_letters[start_index:end_index + 1]
