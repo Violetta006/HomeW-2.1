@@ -1,15 +1,26 @@
-s = input( "Знак( +, -, *, /): ")
-a = float(input("a ="))
-b = float(input("b ="))
+continue_calculating = True
 
+while continue_calculating:
+    s = input("Знак ( +, -, *, /): ")
+    a = float(input("a = "))
+    b = float(input("b = "))
 
-if s == "+":
-    print(a + b)
-elif  s == "-":
-    print(a - b)
-elif s == "*":
-    print(a * b)
-elif s == "/":
-    print(a / b)
-else:
-        print("Помилка: ділення на нуль!")
+    if s == "+":
+        print(a + b)
+    elif s == "-":
+        print(a - b)
+    elif s == "*":
+        print(a * b)
+    elif s == "/":
+        if b != 0:
+            print(a / b)
+        else:
+            print("Ділення на нуль!")
+    else:
+        print("Неправильний знак операції!")
+
+    answer = input("Бажаєте продовжити? (так/т для продовження): ").lower()
+
+    if answer not in ["так", "т"]:
+        continue_calculating = False
+        print("Робота калькулятора завершена.")
