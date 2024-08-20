@@ -1,0 +1,11 @@
+def sum_even_index_and_multiply(lst):
+    if not lst:  # Перевірка на порожній список
+        return 0
+
+    # Обчислення суми елементів із парними індексами
+    sum_even_index = sum(lst[i] for i in range(0, len(lst), 2))
+
+    # Перемноження отриманої суми на останній елемент
+    result = sum_even_index * lst[-1]
+
+    return result
